@@ -10,7 +10,7 @@ const loadFriends = () => {
 	const list = document.querySelector('.list');
 	list.innerHTML = 'Loading....';
 	fetch('/users').then(res=>res.json()).then(result=>{
-		list.innherHTML = '';
+		list.innerHTML = '';
 		if(result.data.length>0){
 				result.data.forEach(val=>{
 				console.log(val)
