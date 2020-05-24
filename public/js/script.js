@@ -7,8 +7,10 @@ const validate = () =>{
 };
 
 const loadFriends = () => {
+	const list = document.querySelector('.list');
+	list.innerHTML = 'Loading....';
 	fetch('/users').then(res=>res.json()).then(result=>{
-		const list = document.querySelector('.list');
+		list.innherHTML = '';
 		if(result.data.length>0){
 				result.data.forEach(val=>{
 				console.log(val)
